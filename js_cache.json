@@ -1,0 +1,7 @@
+[{"name":"lite_power","id":0,"url":"http://89.208.199.6/v3_save/cache_lite.zip","version":2},
+{"name":"lite_mali","id":1,"url":"http://89.208.199.6/v3_save/cache_lite.zip","version":2},
+{"name":"lite_adreno","id":2,"url":"http://89.208.199.6/v3_save/cache_lite.zip","version":2},
+{"name":"full_standart","id":3,"url":"http://89.208.199.6/v3_save/cache_full.zip","version":2}, 
+{"name":"lite_apk","id":4,"url":"http://89.208.199.6/v3_save/client_v31.zip","version":15},
+{"name":"full_standard_apk","id":5,"url":"http://89.208.199.6/v3_save/client_v31.zip","version":15},
+{"name":"forSAMP","id":6,"url":"http://89.208.199.6/v3_save/forsamp_v3.zip","version":9}]
