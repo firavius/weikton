@@ -1,1 +1,9 @@
-[{"online":"47","maxonline":"50","color":"FF0000","x2":"true","key":"1424","name":"BONUS RUSSIA | RED","firstname":"RED","secondname":""}]
+[
+    {
+      "color": "FF0000",
+      "dopname": " ",
+      "maxonline": 500,
+      "name": "RED",
+      "online": 7
+    }
+  ]
