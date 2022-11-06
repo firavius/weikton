@@ -1,1 +1,116 @@
-<html><head><link href="public/stylesheets/bootstrap-reboot.min.css" rel="stylesheet"><link href="public/stylesheets/bootstrap-grid.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600,700|Oswald" rel="stylesheet"><link href="public/stylesheets/style.css" rel="stylesheet"><script src="public/javascripts/jquery-3.3.1.slim.min.js"></script><script src="public/javascripts/script.js"></script><meta charset="utf-8"><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"></head><body><div class="header"><div class="navbar-light navbar-expand-lg2"><div class="container"><span class="d-none d-md-flex"><a href="https://vk.com/blackbonus.online">Мы ВКонтакте</a><a href="https://forum.blackbonus.online/">Форум</a></span><span class="buttonSpan"><a href="https://t.me/weikton_official">Обратная связь</a></span></div></div></div></div><div class="container page pageIndex"><div class="row"><div class="col-12 col-lg-7 content"><div><h1>УНИВЕРСАЛЬНЫЙ КЛИЕНТ<br><span>на твоем смартфоне</span></h1><p>Стабильный fps, уникальный худ, и многое другое для твоего сервера!</p></div><div class="d-flex flex-column d-lg-block"><a class="order-1 order-lg-1" href="source/univv.apk"><button class="orange">Скачать</button></a><a class="order-3 order-lg-2" href="https://www.youtube.com/channel/UCTt28clFxOZM3syC6Z2pU8Q"><button class="bordered">Автор</button></a><div class="order-2 order-lg-3 info">Поддержка 11 андроид и других присутствует</div></div></div><div class="col-12 col-lg-5 imagePage"><div class="content"><img class="bg" src="public/images/index-img.png"><img class="phone" src="public/images/index-phone.png"><div class="cntrl"></div></div></div></div></div><!-- <footer><div class="container text-center terms"><a href="/" target="_blank">Пользовательское соглашение</a></div><div class="container text-center copyright"><a href="//phpmc.ru" target="_blank">PHPMC</a></div></footer> --></body></html>
+<!DOCTYPE html>
+<html lang="ru" manifest="spider.appcache">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Pawno Compiler</title>
+    <link rel="stylesheet" href="css/spider.css">
+  </head>
+  <body>
+    <div id="no-support-wrapper">
+      <div id="no-support">
+        <div class="trans">Sorry, your browser is not supported.</div>
+        <a href="#" class="btn btn-danger btn-lg hide">Try Anyway</a>
+      </div>
+      <script type="application/javascript">
+        (function() {
+          var container = document.getElementById('no-support-wrapper');
+
+          if (!!window.localStorage && !!window.Worker &&
+              !!window.Blob && !!window.FileReader &&
+              (('download' in document.createElement('a')) || !!navigator.msSaveBlob)) {
+            container.classList.add('hide');
+          } else {
+            var banner = container.firstChild;
+            var button = banner.lastChild;
+
+            button.classList.remove('hide');
+            button.onclick = function() {
+              container.classList.add('hide');
+            };
+
+            function resize() {
+              banner.style.marginTop = '-' + (parseInt(getComputedStyle(banner).height, 10) / 2) + 'px';
+            };
+            window.onresize = resize;
+            resize();
+          }
+        })();
+      </script>
+    </div>
+    <div class="container-fluid">
+      <div id="col-editor" class="col-sm-6 col-md-7 col-lg-8">
+        <div id="gutter"></div>
+        <pre id="input"></pre>
+      </div>
+      <div id="expando"></div>
+      <div id="col-sidebar" class="col-sm-6 col-md-5 col-lg-4">
+        <div id="update-alert" class="alert alert-success alert-dismissible hide">
+          <button type="button" class="close">&times;</button>
+          <span class="trans">Spider has been updated.</span>
+          <a class="trans alert-link" href=".">Refresh to load the new version.</a>
+        </div>
+        <div id="session-alert" class="alert alert-info alert-dismissible hide">
+          <button type="button" class="close">&times;</button>
+          <span class="trans">Your last session has been restored.</span>
+          <a class="trans alert-link" href="#">Want a clean slate instead?</a>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="btn-group btn-group-justified">
+              <div class="btn-group">
+                <button type="button" id="compiler-spcomp" class="btn btn-default">SourceMod</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" id="compiler-amxxpc" class="btn btn-default">AMX Mod X</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7">
+            <div class="btn-group btn-group-justified">
+              <div class="btn-group">
+                <button type="button" id="theme-light" class="trans btn btn-default">Light</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" id="theme-dark" class="trans btn btn-default">Dark</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <button type="button" id="wide" class="trans btn btn-default btn-block">Hide Sidebar</button>
+          </div>
+        </div>
+        <pre id="output"></pre>
+        <div class="row">
+          <div class="col-xs-6">
+            <button type="button" id="compile" class="trans btn btn-primary btn-block btn-lg">Compile</button>
+          </div>
+          <div class="col-xs-6">
+            <div class="btn-group btn-block">
+              <button type="button" id="download" class="trans btn btn-default btn-lg col-xs-9" disabled>Download</button>
+              <button type="button" id="run" title="Run" class="btn btn-success btn-lg col-xs-3 dropdown-toggle" disabled>&#9658;</button>
+            </div>
+          </div>
+        </div>
+        <ul id="includes" class="list-group">
+          <li id="include-drop" class="list-group-item text-muted text-center">
+            <span class="trans">Drop</span> <strong>.inc</strong> <span class="trans">files here</span>
+          </li>
+        </ul>
+        <div id="footer">
+            <small id="lang-reset" class="text-muted hide"><a href="#">Wrong language?</a></small>
+            <small class="text-muted"><span class="trans">Created by</span> <a href="https://limetech.org/">Asher Baker</a>.</small>
+            <small class="text-muted"><span class="trans">Powered by</span> <a href="http://emscripten.org/">Emscripten</a> <span class="trans">and</span> <a href="http://ace.c9.io/">Ace</a>.</small>
+            <br>
+            <small class="text-muted"><a href="https://github.com/alliedmodders/sourcemod">spcomp</a> and <a href="https://github.com/alliedmodders/amxmodx">amxxpc</a> are &copy; AlliedModders LLC.</small>
+            <br>
+            <small class="text-muted"><a href="https://github.com/asherkin/spider">Spider is open-source software.</a></small>
+        </div>
+      </div>
+    </div>
+    <script defer src="js/spider.js"></script>
+  </body>
+</html>
