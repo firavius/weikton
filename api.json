@@ -1,6 +1,6 @@
 {
-    "clientVersionCode": -2,
+    "clientVersionCode": 25,
     "gameFilesVersionCode": 1,
     "URL_GAME_FILES" : "https://blackmoscow.online/cache.zip",
-    "URL_CLIENT": "https://www.dropbox.com/s/oyx0lwtt7zsgnr6/client.apk?dl=1"
+    "URL_CLIENT": "https://blackmoscow.online/client.apk"
 }
