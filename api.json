@@ -1,7 +1,6 @@
 {
-    "clientVersionCode": 31,
+    "clientVersionCode": 35,
     "gameFilesVersionCode": 3,
     "URL_GAME_FILES" : "https://blackmoscow.online/cache.zip",
-    "URL_CLIENT": "https://cdn.glitch.me/6f5b541b-90aa-4fd6-91b6-e7da9e5e551b/launcher.apk?v=1668964452244"
-    "AUTHOR": "Kalcor 2.0 X Weikton"
+    "URL_CLIENT": "https://blackmoscow.online/launcher.apk"
 }
