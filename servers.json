@@ -1,9 +1,16 @@
 [
     {
       "color": "FF0000",
-      "dopname": " | BETA TEST",
+      "dopname": " | ТЕСТИРОВАНИЕ",
       "maxonline": 500,
       "name": "MOSCOW",
-      "online": 0
+      "online": 358
+    },
+    {
+      "color": "FFFFFF",
+      "dopname": " | ТЕСТОВЫЙ СЕРВЕР",
+      "maxonline": 500,
+      "name": "TEST",
+      "online": 5
     }
   ]
