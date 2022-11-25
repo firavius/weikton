@@ -1,14 +1,14 @@
 [
     {
       "color": "FF0000",
-      "dopname": " | ТЕСТИРОВАНИЕ",
+      "dopname": "(X3 АКЦИИ)",
       "maxonline": 500,
       "name": "MOSCOW",
       "online": 358
     },
     {
       "color": "FFFFFF",
-      "dopname": " | ТЕСТОВЫЙ СЕРВЕР",
+      "dopname": "(НЕТ ДОСТУПА)",
       "maxonline": 500,
       "name": "TEST",
       "online": 5
